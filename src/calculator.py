@@ -33,6 +33,33 @@ def divide(a, b):
     print(f"Result: {result}")
     return result
 
+def power(a, b):
+    """Raise a to the power of b without using built-in functions"""
+    if not isinstance(a, (int, float)) or not isinstance(b, int):
+        raise TypeError("Base must be int/float and exponent must be int")
+    if b == 0:
+        return 1
+    result = 1
+    exp = abs(b)
+    for _ in range(exp):
+        result *= a
+    return result if b > 0 else 1 / result
+
+def sqrt(n):
+    """Calculate square root using Newton's method"""
+    if not isinstance(n, (int, float)):
+        raise TypeError("Input must be a number")
+    if n < 0:
+        raise ValueError("Cannot calculate square root of a negative number")
+    if n == 0:
+        return 0
+    guess = n / 2
+    for _ in range(20):
+        guess = (guess + n / guess) / 2
+    return guess
+
+
+
 # TODO: Students will add multiply, divide, power, sqrt functions
 
 if __name__ == "__main__":
