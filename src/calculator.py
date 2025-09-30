@@ -33,6 +33,25 @@ def divide(a, b):
     print(f"Result: {result}")
     return result
 
+
+def my_power(base, exponent):
+    result = 1
+    for _ in range(exponent):
+        result *= base
+    return result
+
+def my_sqrt(n, tolerance=1e-10):
+    if n < 0:
+        return "Square root not defined for negative numbers"
+    
+    guess = n / 2.0
+    while abs(guess * guess - n) > tolerance:
+        guess = (guess + n / guess) / 2.0
+    return guess
+
+
+
+
 # TODO: Students will add multiply, divide, power, sqrt functions
 
 if __name__ == "__main__":
