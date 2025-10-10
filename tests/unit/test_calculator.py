@@ -40,4 +40,14 @@ class TestMultiplyDivideWithValidation:
         with pytest.raises(TypeError, match="Division requires numeric inputs"):
             divide("10", 2)
 
+
+
 # TODO: Students will add TestMultiplyDivide class
+class TestMultiplyDivide:
+    def test_multiply_numbers(self):
+        assert multiply(2, 3) == 6
+        assert multiply(-2, 3) == -6
+
+    def test_divide_numbers(self):
+        assert divide(6, 3) == 2
+        assert divide(5, 2) == 2.5
