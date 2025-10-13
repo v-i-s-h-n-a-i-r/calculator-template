@@ -39,5 +39,12 @@ class TestMultiplyDivideWithValidation:
         """Test divide rejects non-numeric inputs."""
         with pytest.raises(TypeError, match="Division requires numeric inputs"):
             divide("10", 2)
+class TestMultiplyDivide:
+    def multiply(a, b): 
+        return a * b 
+    def divide(a, b): 
+        if b == 0: 
+            raise ValueError("Cannot divide by zero") 
+        return a / b 
 
 # TODO: Students will add TestMultiplyDivide class
