@@ -33,9 +33,19 @@ def divide(a, b):
     print(f"Result: {result}")
     return result
 
+def power(a, b):
+    """Raise a to the power of b"""
+    return a ** b
+
+def sqrt(a):
+    """Return the square root of a"""
+    if a < 0:
+        raise ValueError("Cannot compute square root of negative number")
+    return a ** 0.5
 # TODO: Students will add multiply, divide, power, sqrt functions
 
 if __name__ == "__main__":
+
     print("🧮 Calculator Module")
     print(f"2 + 3 = {add(2, 3)}")
     print(f"5 - 2 = {subtract(5, 2)}")
