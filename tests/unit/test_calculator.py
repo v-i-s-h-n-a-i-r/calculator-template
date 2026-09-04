@@ -2,8 +2,9 @@
 Unit Tests for Calculator
 Students start with 2 passing tests, then add more
 """
+#this is my comment
 import pytest
-from src.calculator import add, divide, subtract
+from src.calculator import add, divide, subtract, multiply
 
 class TestBasicOperations:
     """Test basic arithmetic operations"""
