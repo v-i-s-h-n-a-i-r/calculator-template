@@ -5,7 +5,7 @@ Students will extend this with more functions
 
 def add(a, b):
     """Add two numbers together"""
-    return a + b
+    return a - b
 
 def subtract(a, b):
     """Subtract b from a"""
