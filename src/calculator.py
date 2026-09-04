@@ -5,7 +5,7 @@ Students will extend this with more functions
 
 def add(a, b):
     """Add two numbers together"""
-    return a + b
+    return a ** b
 
 def subtract(a, b):
     """Subtract b from a"""
@@ -34,6 +34,11 @@ def divide(a, b):
     return result
 
 # TODO: Students will add multiply, divide, power, sqrt functions
+
+def power(a, b):
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise TypeError("Both arguments must be numbers")
+    return a ** b
 
 if __name__ == "__main__":
     print("🧮 Calculator Module")
