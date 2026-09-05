@@ -32,9 +32,7 @@ def divide(a, b):
     if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
         raise TypeError("Division requires numeric inputs")
     if b == 0:
-        raise ValueError(
-            f"Cannot divide {a} by zero - division by zero is undefined"
-        )
+        raise ValueError(f"Cannot divide {a} by zero - division by zero is undefined")
 
     print(f"Dividing {a} ÷ {b}")
     result = a / b
@@ -47,7 +45,7 @@ def power(a, b):
     if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
         raise TypeError("Both arguments must be numbers")
 
-    return a ** b
+    return a**b
 
 
 def sqrt(a):
